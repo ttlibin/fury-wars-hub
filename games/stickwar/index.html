@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stick War II: Order Empire - Classic Strategy War Game</title>
+    <meta name="description" content="Classic strategy war game featuring stick figures! Command your army, wage control through several nations, and bring peace to the continent.">
+    <meta name="keywords" content="Stick War, strategy, war game, stick figures, empire, command army">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furywars.com/games/stickwar/">
+    <meta property="og:title" content="Stick War II: Order Empire - Classic Strategy War Game">
+    <meta property="og:description" content="Classic strategy war game featuring stick figures! Command your army, wage control through several nations, and bring peace to the continent.">
+    <meta property="og:image" content="https://img.gameflare.com/games/stick-war-ii-order-empire/stick-war-ii-order-empire-1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furywars.com/games/stickwar/">
+    <meta property="twitter:title" content="Stick War II: Order Empire - Classic Strategy War Game">
+    <meta property="twitter:description" content="Classic strategy war game featuring stick figures! Command your army, wage control through several nations, and bring peace to the continent.">
+    <meta property="twitter:image" content="https://img.gameflare.com/games/stick-war-ii-order-empire/stick-war-ii-order-empire-1.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Stick War II: Order Empire",
+        "description": "Classic strategy war game featuring stick figures! Command your army, wage control through several nations, and bring peace to the continent through action-packed campaigns.",
+        "genre": "Strategy War",
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/game-page.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚔️</text></svg>">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-container">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Header -->
+    <header class="game-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../../" class="back-btn">← Back to Home</a>
+                <h1 class="game-title">⚔️ Stick War II: Order Empire</h1>
+                <div class="game-controls">
+                    <button id="fullscreen-btn" class="control-btn">🔍</button>
+                    <button id="audio-btn" class="control-btn">🔊</button>
+                    <button id="help-btn" class="control-btn">❓</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Area -->
+    <main class="game-main">
+        <div class="container">
+            <div class="game-layout">
+                <!-- Game Frame -->
+                <div class="game-frame">
+                    <div class="game-container">
+                        <iframe id="game-iframe" 
+                                src="https://www.gameflare.com/embed/stick-war-ii-order-empire/" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                width="900" 
+                                height="542"
+                                allowfullscreen>
+                        </iframe>
+                        
+                        <div class="game-loading" id="game-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading Stick War II...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Info Panel -->
+                <div class="game-info-panel">
+                    <div class="game-description">
+                        <h2>🎯 About Stick War II</h2>
+                        <p>Classic strategy war game featuring stick figures! Command your army, wage control through several nations, and bring peace to the continent through action-packed campaigns. Build your empire, train different unit types, and lead them to victory in this epic strategy adventure!</p>
+                    </div>
+                    
+                    <div class="game-controls-info">
+                        <h3>🎮 Controls</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <span class="key">A/D</span>
+                                <span class="desc">Move Character</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Space</span>
+                                <span class="desc">Action</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Mouse</span>
+                                <span class="desc">Control & Commands</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Click</span>
+                                <span class="desc">Select Units</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-tips">
+                        <h3>💡 Pro Tips</h3>
+                        <ul>
+                            <li>Build a balanced army with different unit types</li>
+                            <li>Protect your miners to maintain resource flow</li>
+                            <li>Use archers to support your melee units</li>
+                            <li>Upgrade your units when possible</li>
+                            <li>Learn each nation's unique abilities</li>
+                            <li>Time your attacks carefully</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>⚔️ Stick War II - Game Guide</h3>
+                <button class="close-btn" onclick="closeHelpModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h4>🎯 Objective</h4>
+                    <p>Lead the Order Empire to victory! Conquer enemy nations, destroy their statues, and bring peace to the continent of Inamorta.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4>⚔️ Unit Types</h4>
+                    <ul>
+                        <li><strong>Miners:</strong> Collect gold to fund your army</li>
+                        <li><strong>Swordwrath:</strong> Basic melee fighters</li>
+                        <li><strong>Archidon:</strong> Ranged archers with bow and arrows</li>
+                        <li><strong>Speartons:</strong> Heavy infantry with shields</li>
+                        <li><strong>Magikill:</strong> Powerful magic users</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🏗️ Strategy Tips</h4>
+                    <ul>
+                        <li>Always keep miners working to maintain income</li>
+                        <li>Build a mix of units for different situations</li>
+                        <li>Use formation commands to organize your army</li>
+                        <li>Protect your statue at all costs</li>
+                        <li>Learn to micro-manage individual units</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🎮 Game Modes</h4>
+                    <ul>
+                        <li><strong>Campaign:</strong> Follow the story through different nations</li>
+                        <li><strong>Tournament:</strong> Compete against various opponents</li>
+                        <li><strong>Survival:</strong> Defend against endless waves</li>
+                        <li><strong>Deathmatch:</strong> All-out warfare with no mining</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/particles.js"></script>
+    <script src="../../js/game-page.js"></script>
+    <script>
+        // Game-specific initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameTitle = 'Stick War II: Order Empire';
+            const gameUrl = 'https://www.gameflare.com/embed/stick-war-ii-order-empire/';
+            
+            // Initialize game page
+            if (window.initializeGamePage) {
+                window.initializeGamePage(gameTitle, gameUrl);
+            }
+        });
+    </script>
+</body>
+</html> 

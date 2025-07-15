@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fortzone Battle Royale - High-Stakes Survival Showdown</title>
+    <meta name="description" content="Face off against rivals in Fortzone Battle Royale! Massive scenic battleground with forests, rivers, and intense resource competition.">
+    <meta name="keywords" content="Fortzone, Battle Royale, survival, multiplayer, online game, shooting">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furywars.com/games/fortzone/">
+    <meta property="og:title" content="Fortzone Battle Royale - High-Stakes Survival Showdown">
+    <meta property="og:description" content="Face off against rivals in Fortzone Battle Royale! Massive scenic battleground with forests, rivers, and intense resource competition.">
+    <meta property="og:image" content="https://img.gameflare.com/games/fortzone-battle-royale/fortzone-battle-royale-1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furywars.com/games/fortzone/">
+    <meta property="twitter:title" content="Fortzone Battle Royale - High-Stakes Survival Showdown">
+    <meta property="twitter:description" content="Face off against rivals in Fortzone Battle Royale! Massive scenic battleground with forests, rivers, and intense resource competition.">
+    <meta property="twitter:image" content="https://img.gameflare.com/games/fortzone-battle-royale/fortzone-battle-royale-1.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Fortzone Battle Royale",
+        "description": "High-stakes survival showdown! Face off against rivals in a massive, scenic battleground. Explore forests, cross rivers, and compete for resources as the action ramps up quickly.",
+        "genre": "Battle Royale",
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/game-page.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏆</text></svg>">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-container">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Header -->
+    <header class="game-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../../" class="back-btn">← Back to Home</a>
+                <h1 class="game-title">🏆 Fortzone Battle Royale</h1>
+                <div class="game-controls">
+                    <button id="fullscreen-btn" class="control-btn">🔍</button>
+                    <button id="audio-btn" class="control-btn">🔊</button>
+                    <button id="help-btn" class="control-btn">❓</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Area -->
+    <main class="game-main">
+        <div class="container">
+            <div class="game-layout">
+                <!-- Game Frame -->
+                <div class="game-frame">
+                    <div class="game-container">
+                        <iframe id="game-iframe" 
+                                src="https://www.gameflare.com/embed/fortzone-battle-royale/" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                width="900" 
+                                height="542"
+                                allowfullscreen>
+                        </iframe>
+                        
+                        <div class="game-loading" id="game-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading Fortzone Battle Royale...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Info Panel -->
+                <div class="game-info-panel">
+                    <div class="game-description">
+                        <h2>🎯 About Fortzone Battle Royale</h2>
+                        <p>High-stakes survival showdown! Face off against rivals in a massive, scenic battleground. Explore forests, cross rivers, and compete for resources as the action ramps up quickly. Outsmart enemies, collect powerful bonuses, and fight to be the last one standing in this fast-paced test of skill and strategy.</p>
+                    </div>
+                    
+                    <div class="game-controls-info">
+                        <h3>🎮 Controls</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <span class="key">WASD</span>
+                                <span class="desc">Movement</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Space</span>
+                                <span class="desc">Jump</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">C</span>
+                                <span class="desc">Crouch</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">M</span>
+                                <span class="desc">Map</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">I</span>
+                                <span class="desc">Inventory</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-tips">
+                        <h3>💡 Pro Tips</h3>
+                        <ul>
+                            <li>Land in areas with good loot but fewer enemies</li>
+                            <li>Always keep moving to avoid being an easy target</li>
+                            <li>Use the terrain to your advantage for cover</li>
+                            <li>Manage your resources carefully - ammo and health are precious</li>
+                            <li>Listen for enemy footsteps and gunfire</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🏆 Fortzone Battle Royale - Game Guide</h3>
+                <button class="close-btn" onclick="closeHelpModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h4>🎯 Objective</h4>
+                    <p>Be the last player standing in this intense battle royale experience. Survive against all odds in a massive, scenic battleground.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🗺️ Map Features</h4>
+                    <ul>
+                        <li><strong>Forests:</strong> Provide cover but can hide enemies</li>
+                        <li><strong>Rivers:</strong> Natural barriers that slow movement</li>
+                        <li><strong>Buildings:</strong> Great for loot and strategic positioning</li>
+                        <li><strong>Open Areas:</strong> Dangerous but sometimes necessary to cross</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>⚔️ Combat Strategy</h4>
+                    <ul>
+                        <li>Choose your battles wisely - not every fight is worth taking</li>
+                        <li>Use cover effectively and avoid open areas when possible</li>
+                        <li>Third-party fights when enemies are distracted</li>
+                        <li>Keep an eye on the safe zone and plan your rotations</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🎒 Resource Management</h4>
+                    <ul>
+                        <li>Prioritize weapons and ammo early game</li>
+                        <li>Stock up on healing items for late game</li>
+                        <li>Don't hoard - use your resources when needed</li>
+                        <li>Share resources with teammates if playing in squads</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/particles.js"></script>
+    <script src="../../js/game-page.js"></script>
+    <script>
+        // Game-specific initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameTitle = 'Fortzone Battle Royale';
+            const gameUrl = 'https://www.gameflare.com/embed/fortzone-battle-royale/';
+            
+            // Initialize game page
+            if (window.initializeGamePage) {
+                window.initializeGamePage(gameTitle, gameUrl);
+            }
+        });
+    </script>
+</body>
+</html> 

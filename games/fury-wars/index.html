@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fury Wars Complete Game Experience - Free Online Third-Person Shooter</title>
+    <meta name="description" content="Experience the complete Fury Wars game! Explosive third-person shooting with absurd weapons and hilarious heroes. Multiplayer online battles with detailed guides and gameplay tips.">
+    <meta name="keywords" content="Fury Wars complete, online shooter game, third-person shooter, free game, multiplayer, game guide, weapons guide">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Fury Wars">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yoursite.com/games/fury-wars/">
+    <meta property="og:title" content="Fury Wars Complete Game Experience - Free Online Shooter">
+    <meta property="og:description" content="Experience explosive third-person shooting action with absurd weapons and hilarious heroes. Free game, start now!">
+    <meta property="og:image" content="https://yoursite.com/images/fury-wars-og.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yoursite.com/games/fury-wars/">
+    <meta property="twitter:title" content="Fury Wars Complete Game Experience - Free Online Shooter">
+    <meta property="twitter:description" content="Experience explosive third-person shooting action with absurd weapons and hilarious heroes. Free game, start now!">
+    <meta property="twitter:image" content="https://yoursite.com/images/fury-wars-og.jpg">
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/animations.css">
+    <link rel="stylesheet" href="../../css/game-page.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💥</text></svg>">
+    <link rel="canonical" href="https://yoursite.com/games/fury-wars/">
+</head>
+<body class="game-page">
+    <!-- Particle Background -->
+    <div id="particles-container">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Game Header -->
+    <header class="game-header">
+        <div class="container">
+            <div class="game-nav">
+                <a href="../../index.html" class="back-btn">← Back to Home</a>
+                <div class="game-logo">
+                    <h1>💥 FURY WARS Complete Experience</h1>
+                </div>
+                <div class="game-controls">
+                    <button id="audio-toggle" class="control-btn">🔇</button>
+                    <button id="fullscreen-btn" class="control-btn">🔳</button>
+                    <button id="help-btn" class="control-btn">❓</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Content -->
+    <main class="game-main">
+        <div class="container">
+            <div class="game-content-wrapper">
+                <!-- Game Area -->
+                <div class="game-area">
+                    <div class="game-iframe-wrapper">
+                        <div id="game-loading" class="loading-screen">
+                            <div class="loading-animation">
+                                <div class="explosion-loader">💥</div>
+                                <div class="loading-text">🎮 Loading Fury Wars Game...</div>
+                                <div class="loading-tips">
+                                    <p>💡 Loading from Miniplay game platform</p>
+                                    <p>🎯 Get ready for explosive third-person action</p>
+                                </div>
+                            </div>
+                        </div>
+                        <iframe id="game-iframe" 
+                                src="https://www.miniplay.com/embed/fury-wars" 
+                                title="Fury Wars Game - Miniplay"
+                                allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <!-- Fury Wars game options -->
+                    <div class="fury-wars-options" style="margin-top: 20px; text-align: center; background: rgba(255, 69, 0, 0.1); padding: 15px; border-radius: 10px;">
+                        <h3>🎯 Fury Wars - Official Version</h3>
+                        <p>Experience the explosive third-person shooter with perfect iframe embedding support:</p>
+                        <div class="options-buttons" style="margin-top: 15px;">
+                            <button class="control-btn" onclick="openOriginalFuryWars()" style="margin: 5px;">
+                                🚀 New Window Fullscreen Experience <small>(Recommended)</small>
+                            </button>
+                            <button class="control-btn" onclick="showOriginalGameInfo()" style="margin: 5px;">
+                                📖 About Miniplay Platform
+                            </button>
+                        </div>
+                        <p style="font-size: 0.9em; color: #ccc; margin-top: 10px;">
+                            💡 Powered by Miniplay - The premier platform for browser games
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Right info panel -->
+                <aside class="game-info-sidebar">
+                    <div class="quick-stats">
+                        <h3>🎮 Game Information</h3>
+                        <div class="stat-item">
+                            <span class="stat-label">Type:</span>
+                            <span class="stat-value">Third-Person Shooter</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Players:</span>
+                            <span class="stat-value">Multiplayer Online</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Platform:</span>
+                            <span class="stat-value">Web Browser</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Price:</span>
+                            <span class="stat-value">Completely Free</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Rating:</span>
+                            <span class="stat-value">⭐⭐⭐⭐⭐ 4.8/5</span>
+                        </div>
+                    </div>
+
+                    <div class="quick-tips">
+                        <h3>⚡ Quick Tips</h3>
+                        <ul>
+                            <li>🎯 Aim ahead of enemy movement trajectory for better hits</li>
+                            <li>🛡️ Use cover to protect yourself from focused fire</li>
+                            <li>💥 Explosive weapons are devastating in narrow spaces</li>
+                            <li>👥 Team coordination is key in team modes</li>
+                            <li>🔄 Switch weapons frequently to adapt to different ranges</li>
+                        </ul>
+                    </div>
+
+                    <div class="current-events">
+                        <h3>🔥 Game Highlights</h3>
+                        <div class="event-item">
+                            <h4>Innovative Weapon System</h4>
+                            <p>Flaming tridents, explosive torpedoes and other unique weapons</p>
+                        </div>
+                        <div class="event-item">
+                            <h4>Humorous Character Design</h4>
+                            <p>Each hero has unique skills and personality</p>
+                        </div>
+                        <div class="event-item">
+                            <h4>Diverse Maps</h4>
+                            <p>Different battlefield environments from cities to space</p>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            
+            <!-- Detailed game information -->
+            <div class="detailed-game-info">
+                <!-- Game overview -->
+                <section class="game-overview">
+                    <h2>🎯 Fury Wars Complete Introduction</h2>
+                    <div class="overview-content">
+                        <div class="overview-text">
+                            <p><strong>Fury Wars</strong> is a revolutionary third-person online shooter that perfectly combines tactical shooting with absurd humor. The game is renowned for its unique weapon design, hilarious character settings, and explosive combat scenes, bringing players an unprecedented chaotic fun experience.</p>
+                            
+                            <h3>🌟 Core Features</h3>
+                            <div class="feature-highlights">
+                                <div class="feature-item">
+                                    <div class="feature-icon">🔱</div>
+                                    <h4>Absurd Weapon Arsenal</h4>
+                                    <p>From traditional firearms to flaming tridents, from explosive torpedoes to banana cannons, each weapon has unique tactical value and comedic effects.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🦸</div>
+                                    <h4>Hero Characters</h4>
+                                    <p>Choose different hero characters, each with exclusive skill trees, ultimate abilities, and unique combat styles.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🏟️</div>
+                                    <h4>Diverse Maps</h4>
+                                    <p>Battle in various environments: urban ruins, space stations, jungle bases, each map offers different tactical opportunities.</p>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">👥</div>
+                                    <h4>Team Cooperation</h4>
+                                    <p>Supports multiple game modes including team deathmatch, escort missions, control point battles, testing team coordination abilities.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Controls guide -->
+                <section class="controls-section">
+                    <h2>🎮 Game Controls Guide</h2>
+                    <div class="controls-grid">
+                        <div class="control-category">
+                            <h3>Basic Movement</h3>
+                            <div class="control-list">
+                                <div class="control-item">
+                                    <span class="key">W A S D</span>
+                                    <span class="desc">Character movement (forward/back/left/right)</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">Space</span>
+                                    <span class="desc">Jump / Ultimate ability</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">Shift</span>
+                                    <span class="desc">Sprint run</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">Ctrl</span>
+                                    <span class="desc">Crouch/Sneak</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-category">
+                            <h3>Combat Controls</h3>
+                            <div class="control-list">
+                                <div class="control-item">
+                                    <span class="key">Left Mouse</span>
+                                    <span class="desc">Fire weapon</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">Right Mouse</span>
+                                    <span class="desc">Aim/Scope</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">R</span>
+                                    <span class="desc">Reload</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">Q</span>
+                                    <span class="desc">Throw grenade</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="control-category">
+                            <h3>System Functions</h3>
+                            <div class="control-list">
+                                <div class="control-item">
+                                    <span class="key">Tab</span>
+                                    <span class="desc">View scoreboard</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">Enter</span>
+                                    <span class="desc">Open chat</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">M</span>
+                                    <span class="desc">Open map</span>
+                                </div>
+                                <div class="control-item">
+                                    <span class="key">ESC</span>
+                                    <span class="desc">Game menu</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Weapon detailed analysis -->
+                <section class="weapons-detailed">
+                    <h2>🔱 Weapon System Deep Analysis</h2>
+                    <div class="weapon-categories">
+                        <div class="weapon-category">
+                            <h3>🔥 Special Weapons</h3>
+                            <div class="weapon-list">
+                                <div class="weapon-detail">
+                                    <div class="weapon-icon">🔱</div>
+                                    <div class="weapon-info">
+                                        <h4>Flaming Trident</h4>
+                                        <p><strong>Damage Type:</strong> Continuous flame damage</p>
+                                        <p><strong>Best Use:</strong> Control narrow passages, prevent enemy advances</p>
+                                        <p><strong>Tactical Tip:</strong> Aim at ground to create fire walls, indirect damage to hidden enemies</p>
+                                    </div>
+                                </div>
+                                <div class="weapon-detail">
+                                    <div class="weapon-icon">🐟</div>
+                                    <div class="weapon-info">
+                                        <h4>Explosive Torpedo</h4>
+                                        <p><strong>Damage Type:</strong> Tracking explosive damage</p>
+                                        <p><strong>Best Use:</strong> Clear grouped enemy teams</p>
+                                        <p><strong>Tactical Tip:</strong> Use in enemy-dense areas to maximize area damage</p>
+                                    </div>
+                                </div>
+                                <div class="weapon-detail">
+                                    <div class="weapon-icon">🍌</div>
+                                    <div class="weapon-info">
+                                        <h4>Banana Cannon</h4>
+                                        <p><strong>Damage Type:</strong> Control effect + light damage</p>
+                                        <p><strong>Best Use:</strong> Disrupt enemy movement, create elimination opportunities</p>
+                                        <p><strong>Tactical Tip:</strong> Place traps on enemy escape routes</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="weapon-category">
+                            <h3>🔫 Traditional Weapons</h3>
+                            <div class="weapon-list">
+                                <div class="weapon-detail">
+                                    <div class="weapon-icon">🔫</div>
+                                    <div class="weapon-info">
+                                        <h4>Plasma Rifle</h4>
+                                        <p><strong>Damage Type:</strong> High-energy plasma rounds</p>
+                                        <p><strong>Best Use:</strong> Mid-range sustained fire support</p>
+                                        <p><strong>Tactical Tip:</strong> Perfect for beginners, simple operation with stable results</p>
+                                    </div>
+                                </div>
+                                <div class="weapon-detail">
+                                    <div class="weapon-icon">🎯</div>
+                                    <div class="weapon-info">
+                                        <h4>Sniper Laser Cannon</h4>
+                                        <p><strong>Damage Type:</strong> High-precision long-range damage</p>
+                                        <p><strong>Best Use:</strong> Long-range precision sniping</p>
+                                        <p><strong>Tactical Tip:</strong> Requires enemy movement prediction, one-shot kills</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Game modes introduction -->
+                <section class="game-modes">
+                    <h2>🏆 Game Modes Detailed</h2>
+                    <div class="modes-grid">
+                        <div class="mode-card">
+                            <div class="mode-icon">💀</div>
+                            <h3>Team Deathmatch</h3>
+                            <p>Classic team vs team mode, first team to reach kill target wins. Tests individual skills and team coordination.</p>
+                            <div class="mode-tips">
+                                <h4>Victory Tips:</h4>
+                                <ul>
+                                    <li>Stay grouped with team, avoid solo actions</li>
+                                    <li>Control advantageous positions in map center</li>
+                                    <li>Prioritize eliminating enemy DPS characters</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mode-card">
+                            <div class="mode-icon">🚛</div>
+                            <h3>Escort Mode</h3>
+                            <p>One team escorts vehicle to destination, other team prevents escort. Requires tactical thinking for offense and defense switching.</p>
+                            <div class="mode-tips">
+                                <h4>Victory Tips:</h4>
+                                <ul>
+                                    <li>Escort team should build defensive line around vehicle</li>
+                                    <li>Blocking team should focus fire to quickly destroy</li>
+                                    <li>Use terrain and cover effectively</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mode-card">
+                            <div class="mode-icon">🎯</div>
+                            <h3>Control Points</h3>
+                            <p>Capture and hold key positions, accumulate points for victory. Tests team tactical coordination abilities.</p>
+                            <div class="mode-tips">
+                                <h4>Victory Tips:</h4>
+                                <ul>
+                                    <li>Assign members to control multiple points simultaneously</li>
+                                    <li>Prioritize controlling key points in map center</li>
+                                    <li>Establish effective rotation mechanism</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Character skills introduction -->
+                <section class="characters-skills">
+                    <h2>🦸 Hero Character Skill Trees</h2>
+                    <div class="characters-detailed">
+                        <div class="character-detailed">
+                            <div class="character-header">
+                                <div class="character-avatar">🛡️</div>
+                                <div class="character-basic">
+                                    <h3>Steel Warrior (Tank)</h3>
+                                    <p>Frontline meat shield, best choice for protecting teammates</p>
+                                </div>
+                            </div>
+                            <div class="skills-tree">
+                                <div class="skill-item">
+                                    <h4>🔥 Ultimate: Steel Barrier</h4>
+                                    <p>Deploy energy shield absorbing all damage for 10 seconds, providing cover for teammates. 60-second cooldown.</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h4>⚡ Passive: Heavy Armor</h4>
+                                    <p>Reduce 30% damage taken, movement speed decreased by 15%.</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h4>💪 Active: Charge</h4>
+                                    <p>Charge forward, knockback enemies in path and deal damage. 20-second cooldown.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="character-detailed">
+                            <div class="character-header">
+                                <div class="character-avatar">🔥</div>
+                                <div class="character-basic">
+                                    <h3>Flame Mage (DPS)</h3>
+                                    <p>High burst damage, main firepower source on battlefield</p>
+                                </div>
+                            </div>
+                            <div class="skills-tree">
+                                <div class="skill-item">
+                                    <h4>🔥 Ultimate: Flame Storm</h4>
+                                    <p>Summon fire tornado dealing continuous flame damage to large area. Lasts 8 seconds, 45-second cooldown.</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h4>⚡ Passive: Flame Enchantment</h4>
+                                    <p>All attacks have flame damage, causing continuous burn effect on enemies.</p>
+                                </div>
+                                <div class="skill-item">
+                                    <h4>💥 Active: Fireball</h4>
+                                    <p>Launch fireball, deal area damage to enemies on explosion. 15-second cooldown.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>🎯 Fury Wars Complete Game Guide</h2>
+            <div class="help-content">
+                <div class="help-section">
+                    <h3>🔥 Game Overview</h3>
+                    <p>Fury Wars is an explosive third-person shooter known for absurd humor, unique weapons, and intense combat. Supports multiplayer online battles with various game modes.</p>
+                </div>
+                
+                <div class="help-section">
+                    <h3>🎮 Basic Controls</h3>
+                    <div class="controls-help">
+                        <div class="control-group">
+                            <h4>Movement Control</h4>
+                            <ul>
+                                <li><strong>WASD:</strong> Character movement</li>
+                                <li><strong>Space:</strong> Jump/Ultimate ability</li>
+                                <li><strong>Shift:</strong> Sprint run</li>
+                                <li><strong>Ctrl:</strong> Crouch sneak</li>
+                            </ul>
+                        </div>
+                        <div class="control-group">
+                            <h4>Combat Controls</h4>
+                            <ul>
+                                <li><strong>Left Mouse:</strong> Fire weapon</li>
+                                <li><strong>Right Mouse:</strong> Aim mode</li>
+                                <li><strong>R:</strong> Reload</li>
+                                <li><strong>Q:</strong> Throw grenade</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="help-section">
+                    <h3>🔱 Weapon System</h3>
+                    <div class="weapons-help">
+                        <h4>Special Weapons</h4>
+                        <ul>
+                            <li><strong>Flaming Trident:</strong> Area flame damage, suitable for area control</li>
+                            <li><strong>Explosive Torpedo:</strong> Auto-tracking, area explosive damage</li>
+                            <li><strong>Banana Cannon:</strong> Makes enemies slip, provides control effect</li>
+                        </ul>
+                        <h4>Traditional Weapons</h4>
+                        <ul>
+                            <li><strong>Plasma Rifle:</strong> Stable mid-range output</li>
+                            <li><strong>Sniper Laser Cannon:</strong> High-precision long-range strikes</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="help-section">
+                    <h3>🏆 Game Modes</h3>
+                    <ul>
+                        <li><strong>Team Deathmatch:</strong> Kill enemies to reach target score</li>
+                        <li><strong>Escort Mode:</strong> Escort/prevent vehicle reaching destination</li>
+                        <li><strong>Control Points:</strong> Capture and hold key positions</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h3>💡 Advanced Tips</h3>
+                    <ul>
+                        <li>Learn to predict enemy movement patterns for better accuracy</li>
+                        <li>Use cover effectively to avoid focused fire</li>
+                        <li>Choose appropriate weapons based on combat distance</li>
+                        <li>Always watch teammate positions in team modes</li>
+                        <li>Master each character's skill cooldown times</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="game-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="game-stats">
+                    <h4>🎯 Game Statistics</h4>
+                    <p>🎮 Type: Third-Person Shooter</p>
+                    <p>👥 Players: Multiplayer Online Battle</p>
+                    <p>🌐 Platform: Web Browser</p>
+                    <p>💰 Price: Completely Free</p>
+                    <p>⭐ Rating: 4.8/5 stars</p>
+                </div>
+                <div class="related-links">
+                    <h4>🔗 Related Links</h4>
+                    <a href="../../index.html">← Back to Home</a>
+                    <a href="../../index.html#review">Game Review</a>
+                    <a href="../../index.html#guides">Complete Guide</a>
+                    <a href="../../index.html#weapons">Weapon Analysis</a>
+                    <a href="javascript:void(0)" onclick="openOriginalFuryWars()">🚀 Original Game</a>
+                </div>
+                <div class="game-features">
+                    <h4>🌟 Game Features</h4>
+                    <ul>
+                        <li>🔥 Innovative weapon system</li>
+                        <li>🎭 Humorous character design</li>
+                        <li>💥 Explosive combat</li>
+                        <li>🗺️ Diverse maps</li>
+                        <li>👥 Team cooperation modes</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Fury Wars Complete Game Experience | The Most Professional Shooting Game Platform | <a href="../../index.html">Home</a></p>
+                <p>Experience the most thrilling third-person shooter, master all weapons and tactics, become the battlefield champion!</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Audio Elements -->
+    <audio id="bg-music" loop>
+        <source src="../../audio/bg-music.mp3" type="audio/mpeg">
+        <source src="../../audio/bg-music.ogg" type="audio/ogg">
+    </audio>
+    
+    <audio id="explosion-sound">
+        <source src="../../audio/explosion.mp3" type="audio/mpeg">
+        <source src="../../audio/explosion.ogg" type="audio/ogg">
+    </audio>
+
+    <!-- Scripts -->
+    <script src="../../js/particles.js"></script>
+    <script src="../../js/game-page.js"></script>
+    
+    <!-- Structured data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "VideoGame",
+        "name": "Fury Wars",
+        "description": "Explosive third-person shooter with absurd weapons and humorous characters",
+        "genre": "Third-Person Shooter",
+        "gamePlatform": "Web Browser",
+        "url": "https://yoursite.com/games/fury-wars/",
+        "author": {
+            "@type": "Organization",
+            "name": "Fury Wars"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1240",
+            "bestRating": "5"
+        },
+        "screenshot": "https://yoursite.com/images/fury-wars-screenshot.jpg"
+    }
+    </script>
+
+    <!-- Game guide structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Play Fury Wars - Complete Game Guide",
+        "description": "Detailed Fury Wars game guide including controls, weapons, tactics, and tips",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Master Basic Controls",
+                "text": "Use WASD for movement, mouse for view and shooting, space for jumping, shift for sprinting"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Choose Appropriate Weapons",
+                "text": "Select weapons based on combat distance: shotguns for close range, rifles for mid-range, snipers for long range"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Team Coordination",
+                "text": "Coordinate with teammates in team modes, divide roles clearly, provide mutual cover"
+            }
+        ]
+    }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe 嵌入测试 - Fury Wars</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            margin: 0;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            color: #ff4500;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .test-section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            border: 2px solid #ff4500;
+        }
+        
+        .test-section h2 {
+            color: #ffd700;
+            margin-bottom: 15px;
+        }
+        
+        .iframe-container {
+            position: relative;
+            width: 100%;
+            height: 400px;
+            border: 2px solid #ff4500;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .status {
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        .status.loading {
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+        }
+        
+        .status.success {
+            background: rgba(0, 255, 0, 0.2);
+            color: #00ff00;
+        }
+        
+        .status.error {
+            background: rgba(255, 0, 0, 0.2);
+            color: #ff6b6b;
+        }
+        
+        .test-info {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        
+        .test-info h4 {
+            color: #ffd700;
+            margin-bottom: 10px;
+        }
+        
+        .test-info ul {
+            margin: 10px 0;
+            padding-left: 20px;
+        }
+        
+        .test-info li {
+            margin-bottom: 5px;
+        }
+        
+        .btn {
+            background: #ff4500;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #ff6b35;
+            transform: translateY(-2px);
+        }
+        
+        .log {
+            background: #000;
+            color: #00ff00;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🔍 Iframe 嵌入诊断工具</h1>
+        
+        <div class="test-section">
+            <h2>🎮 Zahraj.sk - Fury Wars (最新推荐)</h2>
+            <div class="status loading" id="status-zahraj">⏳ 正在加载...</div>
+            <div class="iframe-container">
+                <iframe id="iframe-zahraj" src="https://www.zahraj.sk/embed/fury-wars/"></iframe>
+            </div>
+            <div class="test-info">
+                <h4>测试信息：</h4>
+                <ul>
+                    <li><strong>URL:</strong> https://www.zahraj.sk/embed/fury-wars/</li>
+                    <li><strong>平台:</strong> Zahraj.sk</li>
+                    <li><strong>预期结果:</strong> 应该可以正常嵌入，无重定向问题</li>
+                    <li><strong>优势:</strong> 斯洛伐克游戏平台，通常支持iframe嵌入</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎮 Miniplay - Fury Wars</h2>
+            <div class="status loading" id="status-1">⏳ 正在加载...</div>
+            <div class="iframe-container">
+                <iframe id="iframe-1" src="https://www.miniplay.com/embed/fury-wars"></iframe>
+            </div>
+            <div class="test-info">
+                <h4>测试信息：</h4>
+                <ul>
+                    <li><strong>URL:</strong> https://www.miniplay.com/embed/fury-wars</li>
+                    <li><strong>平台:</strong> Miniplay</li>
+                    <li><strong>预期结果:</strong> 可能会重定向到playhop.com并被拒绝</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎮 GameFlare - Fury Wars (备用)</h2>
+            <div class="status loading" id="status-2">⏳ 正在加载...</div>
+            <div class="iframe-container">
+                <iframe id="iframe-2" src="https://www.gameflare.com/embed/fury-wars/"></iframe>
+            </div>
+            <div class="test-info">
+                <h4>测试信息：</h4>
+                <ul>
+                    <li><strong>URL:</strong> https://www.gameflare.com/embed/fury-wars/</li>
+                    <li><strong>平台:</strong> GameFlare</li>
+                    <li><strong>预期结果:</strong> 应该可以正常嵌入</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🎯 CrazyGames - Fragen</h2>
+            <div class="status loading" id="status-3">⏳ 正在加载...</div>
+            <div class="iframe-container">
+                <iframe id="iframe-3" src="https://www.crazygames.com/embed/fragen"></iframe>
+            </div>
+            <div class="test-info">
+                <h4>测试信息：</h4>
+                <ul>
+                    <li><strong>URL:</strong> https://www.crazygames.com/embed/fragen</li>
+                    <li><strong>平台:</strong> CrazyGames</li>
+                    <li><strong>预期结果:</strong> 可能被重定向或拒绝</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>🔬 诊断控制</h2>
+            <button class="btn" onclick="testAllIframes()">🔄 重新测试所有</button>
+            <button class="btn" onclick="clearLog()">🗑️ 清空日志</button>
+            <button class="btn" onclick="checkRedirects()">🔍 检查重定向</button>
+            
+            <div class="log" id="diagnostic-log">
+                <div>🚀 诊断工具已准备就绪...</div>
+                <div>📝 这个工具将帮助检测iframe嵌入问题</div>
+                <div>⚠️ 如果看到"拒绝连接"错误，说明平台不允许iframe嵌入</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 诊断日志
+        function log(message, type = 'info') {
+            const logElement = document.getElementById('diagnostic-log');
+            const timestamp = new Date().toLocaleTimeString();
+            const colors = {
+                info: '#00ff00',
+                warn: '#ffa500',
+                error: '#ff6b6b',
+                success: '#00ff00'
+            };
+            
+            const div = document.createElement('div');
+            div.style.color = colors[type] || '#00ff00';
+            div.innerHTML = `[${timestamp}] ${message}`;
+            logElement.appendChild(div);
+            logElement.scrollTop = logElement.scrollHeight;
+        }
+
+        // 设置iframe监听器
+        function setupIframeListeners() {
+            // 包括zahraj测试框架
+            const iframes = document.querySelectorAll('iframe');
+            const statusIds = ['status-zahraj', 'status-1', 'status-2', 'status-3'];
+            
+            iframes.forEach((iframe, index) => {
+                const statusElement = document.getElementById(statusIds[index]);
+                if (!statusElement) return;
+                
+                const iframeIndex = index + 1;
+                
+                // 加载成功
+                iframe.onload = function() {
+                    log(`✅ Iframe ${iframeIndex} 加载成功: ${iframe.src}`, 'success');
+                    statusElement.className = 'status success';
+                    statusElement.textContent = '✅ 加载成功';
+                    
+                    // 检查是否真的加载了内容
+                    setTimeout(() => {
+                        try {
+                            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                            if (iframeDoc) {
+                                log(`📄 Iframe ${iframeIndex} 内容可访问`, 'success');
+                            }
+                        } catch (error) {
+                            log(`🔒 Iframe ${iframeIndex} 内容受CORS保护: ${error.message}`, 'warn');
+                        }
+                    }, 1000);
+                };
+                
+                // 加载失败
+                iframe.onerror = function() {
+                    log(`❌ Iframe ${iframeIndex} 加载失败: ${iframe.src}`, 'error');
+                    statusElement.className = 'status error';
+                    statusElement.textContent = '❌ 加载失败';
+                };
+                
+                // 超时检测
+                setTimeout(() => {
+                    if (statusElement.className.includes('loading')) {
+                        log(`⏰ Iframe ${iframeIndex} 加载超时，可能被阻止`, 'warn');
+                        statusElement.className = 'status error';
+                        statusElement.textContent = '⏰ 加载超时 - 可能被阻止';
+                    }
+                }, 10000);
+            });
+        }
+
+        // 检查重定向
+        async function checkRedirects() {
+            log('🔍 开始检查URL重定向...', 'info');
+            
+            const urls = [
+                'https://www.zahraj.sk/embed/fury-wars/',
+                'https://www.miniplay.com/embed/fury-wars',
+                'https://www.gameflare.com/embed/fury-wars/',
+                'https://www.crazygames.com/embed/fragen'
+            ];
+            
+            for (let i = 0; i < urls.length; i++) {
+                const url = urls[i];
+                try {
+                    log(`🌐 检查URL: ${url}`, 'info');
+                    
+                    const response = await fetch(url, {
+                        method: 'HEAD',
+                        mode: 'no-cors'
+                    });
+                    
+                    log(`📡 响应状态: ${response.status || '未知 (CORS限制)'}`, 'info');
+                    
+                } catch (error) {
+                    log(`⚠️ 请求失败: ${error.message}`, 'warn');
+                    
+                    if (error.message.includes('CORS')) {
+                        log(`🔒 CORS错误通常意味着服务器拒绝跨域请求`, 'warn');
+                    }
+                }
+            }
+        }
+
+        // 重新测试所有iframe
+        function testAllIframes() {
+            log('🔄 重新加载所有iframe...', 'info');
+            
+            const iframes = document.querySelectorAll('iframe');
+            const statusElements = document.querySelectorAll('.status');
+            
+            statusElements.forEach((status, index) => {
+                status.className = 'status loading';
+                status.textContent = '⏳ 正在加载...';
+            });
+            
+            iframes.forEach((iframe, index) => {
+                const originalSrc = iframe.src;
+                iframe.src = '';
+                setTimeout(() => {
+                    iframe.src = originalSrc;
+                    log(`🔄 重新加载 Iframe ${index + 1}`, 'info');
+                }, 500);
+            });
+        }
+
+        // 清空日志
+        function clearLog() {
+            const logElement = document.getElementById('diagnostic-log');
+            logElement.innerHTML = '<div>🧹 日志已清空</div>';
+        }
+
+        // 监听安全策略违规
+        document.addEventListener('securitypolicyviolation', function(e) {
+            log(`🚨 安全策略违规: ${e.violatedDirective} - ${e.blockedURI}`, 'error');
+        });
+
+        // 监听全局错误
+        window.addEventListener('error', function(e) {
+            if (e.message.includes('iframe') || e.message.includes('frame')) {
+                log(`🚨 Iframe相关错误: ${e.message}`, 'error');
+            }
+        });
+
+        // 页面加载完成后初始化
+        document.addEventListener('DOMContentLoaded', function() {
+            log('🎯 页面加载完成，开始iframe诊断...', 'info');
+            setupIframeListeners();
+            
+            // 5秒后自动检查重定向
+            setTimeout(() => {
+                checkRedirects();
+            }, 5000);
+        });
+    </script>
+</body>
+</html> 

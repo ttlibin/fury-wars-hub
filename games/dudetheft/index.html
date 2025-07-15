@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dude Theft Wars - Open World Adventure Game</title>
+    <meta name="description" content="Open-world adventure with exaggerated physics and outlandish characters! Command vehicles, cruise streets, or soar through the sky.">
+    <meta name="keywords" content="Dude Theft Wars, open world, adventure, physics, vehicles, action game">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furywars.com/games/dudetheft/">
+    <meta property="og:title" content="Dude Theft Wars - Open World Adventure Game">
+    <meta property="og:description" content="Open-world adventure with exaggerated physics and outlandish characters! Command vehicles, cruise streets, or soar through the sky.">
+    <meta property="og:image" content="https://img.gameflare.com/games/dude-theft-wars/dude-theft-wars-1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furywars.com/games/dudetheft/">
+    <meta property="twitter:title" content="Dude Theft Wars - Open World Adventure Game">
+    <meta property="twitter:description" content="Open-world adventure with exaggerated physics and outlandish characters! Command vehicles, cruise streets, or soar through the sky.">
+    <meta property="twitter:image" content="https://img.gameflare.com/games/dude-theft-wars/dude-theft-wars-1.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Dude Theft Wars",
+        "description": "Open-world adventure with exaggerated physics and outlandish characters! Command your own arsenal of vehicles, cruise the streets on a trusty bike, or soar through the sky in your private jet.",
+        "genre": "Open World",
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/game-page.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚗</text></svg>">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-container">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Header -->
+    <header class="game-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../../" class="back-btn">← Back to Home</a>
+                <h1 class="game-title">🚗 Dude Theft Wars</h1>
+                <div class="game-controls">
+                    <button id="fullscreen-btn" class="control-btn">🔍</button>
+                    <button id="audio-btn" class="control-btn">🔊</button>
+                    <button id="help-btn" class="control-btn">❓</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Area -->
+    <main class="game-main">
+        <div class="container">
+            <div class="game-layout">
+                <!-- Game Frame -->
+                <div class="game-frame">
+                    <div class="game-container">
+                        <iframe id="game-iframe" 
+                                src="https://www.gameflare.com/embed/dude-theft-wars/" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                width="900" 
+                                height="542"
+                                allowfullscreen>
+                        </iframe>
+                        
+                        <div class="game-loading" id="game-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading Dude Theft Wars...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Info Panel -->
+                <div class="game-info-panel">
+                    <div class="game-description">
+                        <h2>🎯 About Dude Theft Wars</h2>
+                        <p>Open-world adventure with exaggerated physics and outlandish characters! Command vehicles, cruise streets, or soar through the sky. Your imagination is your only limit! Explore a vibrant 3D environment brimming with surprises, complete missions, and unleash your inner destructor in this unforgettable rampage of chaos!</p>
+                    </div>
+                    
+                    <div class="game-controls-info">
+                        <h3>🎮 Controls</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <span class="key">WASD</span>
+                                <span class="desc">Move</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Left Click</span>
+                                <span class="desc">Shooting</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Right Click</span>
+                                <span class="desc">Aim</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">C</span>
+                                <span class="desc">Grenade</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">H</span>
+                                <span class="desc">First Aid Kit</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-tips">
+                        <h3>💡 Pro Tips</h3>
+                        <ul>
+                            <li>Explore every corner of the city for hidden secrets</li>
+                            <li>Try different vehicles for unique experiences</li>
+                            <li>Complete missions to unlock new areas</li>
+                            <li>Experiment with the physics system</li>
+                            <li>Use the environment to your advantage</li>
+                            <li>Don't be afraid to cause some chaos!</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🚗 Dude Theft Wars - Game Guide</h3>
+                <button class="close-btn" onclick="closeHelpModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h4>🎯 Objective</h4>
+                    <p>There's no single objective - this is your sandbox! Explore the open world, complete missions, cause mayhem, or just have fun experimenting with the physics!</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🚗 Vehicles</h4>
+                    <ul>
+                        <li><strong>Cars:</strong> Fast ground transportation</li>
+                        <li><strong>Motorcycles:</strong> Agile and quick</li>
+                        <li><strong>Trucks:</strong> Heavy-duty vehicles</li>
+                        <li><strong>Helicopters:</strong> Aerial exploration</li>
+                        <li><strong>Boats:</strong> Water-based travel</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🎮 Activities</h4>
+                    <ul>
+                        <li>Complete story missions</li>
+                        <li>Explore the vast open world</li>
+                        <li>Steal and drive various vehicles</li>
+                        <li>Engage in combat with NPCs</li>
+                        <li>Discover hidden locations</li>
+                        <li>Experiment with physics</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>💡 Survival Tips</h4>
+                    <ul>
+                        <li>Keep an eye on your health bar</li>
+                        <li>Use cover during firefights</li>
+                        <li>Vehicles can be used as weapons</li>
+                        <li>Explore rooftops for better vantage points</li>
+                        <li>Save your game progress regularly</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/particles.js"></script>
+    <script src="../../js/game-page.js"></script>
+    <script>
+        // Game-specific initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameTitle = 'Dude Theft Wars';
+            const gameUrl = 'https://www.gameflare.com/embed/dude-theft-wars/';
+            
+            // Initialize game page
+            if (window.initializeGamePage) {
+                window.initializeGamePage(gameTitle, gameUrl);
+            }
+        });
+    </script>
+</body>
+</html> 

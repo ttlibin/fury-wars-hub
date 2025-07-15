@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hazmob FPS: Online Shooter - Multiplayer Combat Action</title>
+    <meta name="description" content="Multiplayer shooting FPS game where every second counts! Play against other players across multiple game modes in non-stop combat.">
+    <meta name="keywords" content="Hazmob, FPS, online shooter, multiplayer, combat, action game">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://furywars.com/games/hazmob/">
+    <meta property="og:title" content="Hazmob FPS: Online Shooter - Multiplayer Combat Action">
+    <meta property="og:description" content="Multiplayer shooting FPS game where every second counts! Play against other players across multiple game modes in non-stop combat.">
+    <meta property="og:image" content="https://img.gameflare.com/games/hazmob-fps-online-pvp-shooter/hazmob-fps-online-pvp-shooter-1.jpg">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://furywars.com/games/hazmob/">
+    <meta property="twitter:title" content="Hazmob FPS: Online Shooter - Multiplayer Combat Action">
+    <meta property="twitter:description" content="Multiplayer shooting FPS game where every second counts! Play against other players across multiple game modes in non-stop combat.">
+    <meta property="twitter:image" content="https://img.gameflare.com/games/hazmob-fps-online-pvp-shooter/hazmob-fps-online-pvp-shooter-1.jpg">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Game",
+        "name": "Hazmob FPS: Online Shooter",
+        "description": "Multiplayer shooting FPS game where every second counts! Play against other players across multiple game modes in non-stop combat. Perfect for thrill-seekers!",
+        "genre": "FPS Shooter",
+        "gamePlatform": "Web Browser",
+        "operatingSystem": "Any",
+        "applicationCategory": "Game",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/game-page.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔫</text></svg>">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-container">
+        <canvas id="particles-canvas"></canvas>
+    </div>
+
+    <!-- Header -->
+    <header class="game-header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../../" class="back-btn">← Back to Home</a>
+                <h1 class="game-title">🔫 Hazmob FPS: Online Shooter</h1>
+                <div class="game-controls">
+                    <button id="fullscreen-btn" class="control-btn">🔍</button>
+                    <button id="audio-btn" class="control-btn">🔊</button>
+                    <button id="help-btn" class="control-btn">❓</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Game Area -->
+    <main class="game-main">
+        <div class="container">
+            <div class="game-layout">
+                <!-- Game Frame -->
+                <div class="game-frame">
+                    <div class="game-container">
+                        <iframe id="game-iframe" 
+                                src="https://www.gameflare.com/embed/hazmob-fps-online-pvp-shooter/" 
+                                frameborder="0" 
+                                scrolling="no" 
+                                width="900" 
+                                height="542"
+                                allowfullscreen>
+                        </iframe>
+                        
+                        <div class="game-loading" id="game-loading">
+                            <div class="loading-spinner"></div>
+                            <p>Loading Hazmob FPS...</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Game Info Panel -->
+                <div class="game-info-panel">
+                    <div class="game-description">
+                        <h2>🎯 About Hazmob FPS</h2>
+                        <p>Multiplayer shooting FPS game where every second counts! Play against other players across multiple game modes in non-stop combat. Perfect for thrill-seekers who want fast-paced action and competitive gameplay. Master different weapons, learn the maps, and dominate the battlefield!</p>
+                    </div>
+                    
+                    <div class="game-controls-info">
+                        <h3>🎮 Controls</h3>
+                        <div class="controls-list">
+                            <div class="control-item">
+                                <span class="key">WASD</span>
+                                <span class="desc">Move</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Mouse</span>
+                                <span class="desc">Look Around</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Left Click</span>
+                                <span class="desc">Shoot</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Right Click</span>
+                                <span class="desc">Aim</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">Shift</span>
+                                <span class="desc">Run</span>
+                            </div>
+                            <div class="control-item">
+                                <span class="key">1-6</span>
+                                <span class="desc">Switch Weapons</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="game-tips">
+                        <h3>💡 Pro Tips</h3>
+                        <ul>
+                            <li>Learn the maps and common camping spots</li>
+                            <li>Use cover effectively and don't expose yourself</li>
+                            <li>Practice your aim in training mode first</li>
+                            <li>Communicate with teammates in team modes</li>
+                            <li>Keep moving to avoid being an easy target</li>
+                            <li>Master different weapon types for various situations</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Help Modal -->
+    <div id="help-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>🔫 Hazmob FPS - Game Guide</h3>
+                <button class="close-btn" onclick="closeHelpModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="help-section">
+                    <h4>🎯 Objective</h4>
+                    <p>Compete against other players in various game modes. Eliminate enemies, complete objectives, and climb the leaderboard to prove your skills!</p>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🎮 Game Modes</h4>
+                    <ul>
+                        <li><strong>Deathmatch:</strong> Free-for-all combat, most kills wins</li>
+                        <li><strong>Team Deathmatch:</strong> Team vs team elimination</li>
+                        <li><strong>Capture the Flag:</strong> Steal enemy flag and return it to base</li>
+                        <li><strong>King of the Hill:</strong> Control the designated area</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>🔫 Weapon Types</h4>
+                    <ul>
+                        <li><strong>Assault Rifles:</strong> Balanced damage and range</li>
+                        <li><strong>Sniper Rifles:</strong> High damage, long range</li>
+                        <li><strong>Shotguns:</strong> Devastating close-range damage</li>
+                        <li><strong>SMGs:</strong> Fast fire rate, good for close combat</li>
+                        <li><strong>Pistols:</strong> Reliable backup weapons</li>
+                    </ul>
+                </div>
+                
+                <div class="help-section">
+                    <h4>⚔️ Combat Tips</h4>
+                    <ul>
+                        <li>Aim for the head for maximum damage</li>
+                        <li>Use the right weapon for the right situation</li>
+                        <li>Pre-aim common angles and corners</li>
+                        <li>Learn to strafe while shooting</li>
+                        <li>Use grenades to flush out campers</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../../js/particles.js"></script>
+    <script src="../../js/game-page.js"></script>
+    <script>
+        // Game-specific initialization
+        document.addEventListener('DOMContentLoaded', function() {
+            const gameTitle = 'Hazmob FPS: Online Shooter';
+            const gameUrl = 'https://www.gameflare.com/embed/hazmob-fps-online-pvp-shooter/';
+            
+            // Initialize game page
+            if (window.initializeGamePage) {
+                window.initializeGamePage(gameTitle, gameUrl);
+            }
+        });
+    </script>
+</body>
+</html> 
